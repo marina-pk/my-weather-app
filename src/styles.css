@@ -15,6 +15,12 @@ i {
   text-align: right;
   padding: 0px 10px;
 }
+footer {
+  margin: 45px 40px;
+}
+.footer-link {
+  text-decoration: none;
+}
 .celsius,
 .fahrenheit {
   text-decoration: none;
