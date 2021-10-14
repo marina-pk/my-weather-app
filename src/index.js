@@ -27,6 +27,7 @@ function searchCity(event) {
     let currentLowTemp = document.querySelector(".current-low-temperature");
     let currentHumidity = document.querySelector(".current-humidity");
     let currentWindSpeed = document.querySelector(".current-wind-speed");
+    let iconElement = document.querySelector("#current-day-icon");
     currentTemperature.innerHTML = Math.round(response.data.main.temp);
     currentWeatherComment.innerHTML = response.data.weather[0].description;
     currentLowTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
@@ -34,6 +35,13 @@ function searchCity(event) {
     currentWindSpeed.innerHTML = `${Math.round(
       response.data.wind.speed * 3.6
     )} km/h`;
+
+    iconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+
     function convertCelsius(event) {
       event.preventDefault();
       let h3 = document.querySelector(".today-temperature");
@@ -74,5 +82,6 @@ function searchCity(event) {
 
   axios.get(currentWeatherUrl).then(displayWeather);
 }
+
 let form = document.querySelector("form");
 form.addEventListener("submit", searchCity);

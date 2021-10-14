@@ -24,7 +24,7 @@ footer {
 .celsius,
 .fahrenheit {
   text-decoration: none;
-  font-size: 17px;
+  font-size: 15px;
 }
 .input-box-label {
   color: #5f6769;
@@ -73,8 +73,8 @@ footer {
 }
 span {
   position: relative;
-  top: -40px;
-  right: -80px;
+  top: -45px;
+  right: -65px;
 }
 #today-parameters {
   margin-top: 50px;
@@ -83,13 +83,14 @@ span {
   padding: 10px 30px;
 }
 #marinas-container .today-comment {
-  margin-left: -55px;
+  margin-left: -50px;
 }
 #marinas-container .today-temperature {
-  margin-left: 32px;
+  margin-left: 20px;
 }
 #marinas-container .today-icon {
-  margin-left: 20px;
+  width: 80px;
+  margin-left: 10px;
 }
 #marinas-container .search-row {
   padding: 0;
