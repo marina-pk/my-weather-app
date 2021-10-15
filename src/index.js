@@ -53,7 +53,10 @@ function searchCity(event) {
       currentLowTempCelsius.innerHTML = `${Math.round(
         response.data.main.temp_min
       )}°`;
+      celsiusLink.classList.add("active");
+      fahrenheitLink.classList.remove("active");
     }
+
     let celsiusTemperature = document.querySelector("#celsiusLink");
     celsiusTemperature.addEventListener("click", convertCelsius);
 
@@ -71,7 +74,10 @@ function searchCity(event) {
       currentLowTempFahrenheit.innerHTML = `${Math.round(
         (lowFahrenheitTemp * 9) / 5 + 32
       )}°`;
+      celsiusLink.classList.remove("active");
+      fahrenheitLink.classList.add("active");
     }
+
     let fahrenheitTemperature = document.querySelector("#fahrenheitLink");
     fahrenheitTemperature.addEventListener("click", convertFahrenheit);
   }
