@@ -74,7 +74,7 @@ footer {
 span {
   position: relative;
   top: -45px;
-  right: -65px;
+  right: -85px;
 }
 #today-parameters {
   margin-top: 50px;
@@ -82,15 +82,17 @@ span {
 #marinas-container button {
   padding: 10px 30px;
 }
-#marinas-container .today-comment {
-  margin-left: -50px;
+#marinas-container .current-comment-container {
+  text-align: center;
+  margin-top: -25px;
 }
 #marinas-container .today-temperature {
-  margin-left: 20px;
+  text-align: center;
 }
 #marinas-container .today-icon {
   width: 80px;
-  margin-left: 10px;
+  display: block;
+  margin: auto;
 }
 #marinas-container .search-row {
   padding: 0;
