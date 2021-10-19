@@ -21,6 +21,13 @@ function searchCity(event) {
   let cityLabel = document.querySelector("#currentCity");
   cityLabel.innerHTML = searchInput;
 
+  function getForecast(coordinates) {
+    console.log(coordinates);
+    let apiKey = "8d9838178b5b401f1b4e7cb5af18e210";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayForecast);
+  }
+
   function displayWeather(response) {
     let currentTemperature = document.querySelector(".today-temperature");
     let currentWeatherComment = document.querySelector(".today-comment");
@@ -80,6 +87,7 @@ function searchCity(event) {
 
     let fahrenheitTemperature = document.querySelector("#fahrenheitLink");
     fahrenheitTemperature.addEventListener("click", convertFahrenheit);
+    getForecast(response.data.coord);
   }
 
   let city = searchInput;
