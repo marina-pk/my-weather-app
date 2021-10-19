@@ -16,7 +16,7 @@
       src="https://kit.fontawesome.com/72023a2b9a.js"
       crossorigin="anonymous"
     ></script>
-     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <title>Weather app</title>
   </head>
@@ -51,39 +51,44 @@
                 <div class="col-5">
                   <h5 class="card-title" id="currentCity">Toronto, ON</h5>
                   <h6 class="card-subtitle mb-2 text-muted" id="currentDayCard">
-                  Thursday 3:30 pm
+                    Thursday 3:30 pm
                   </h6>
                   <div class="row">
                     <div class="col-7 weather-temperature">
-                  <img
-                    src="src/images/m-c-rain.png"
-                    class="card-img-top today-icon" 
-                    id = "current-day-icon"
-                    alt="weather-icon"
-                  />
-                  
-                  <h3 class="today-temperature">26</h3>
-                  <span class="temperature-unit"><a id="celsiusLink" class="active" href="#">°C</a> | <a id="fahrenheitLink"  href="#">°F</a></span>
-<div class="current-comment-container"><small class="today-comment">A few showers</small></div>
-                  </div>
+                      <img
+                        src="src/images/m-c-rain.png"
+                        class="card-img-top today-icon"
+                        id="current-day-icon"
+                        alt="weather-icon"
+                      />
+
+                      <h3 class="today-temperature">26</h3>
+                      <span class="temperature-unit"
+                        ><a id="celsiusLink" class="active" href="#">°C</a> |
+                        <a id="fahrenheitLink" href="#">°F</a></span
+                      >
+                      <div class="current-comment-container">
+                        <small class="today-comment">A few showers</small>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div id="today-parameters" class="col-7">
                   <ul class="list-group list-group-horizontal">
                     <li class="list-group-item">
-                      <i class="fas fa-temperature-low"></i>Low 
+                      <i class="fas fa-temperature-low"></i>Low
                     </li>
                     <li class="list-group-item current-low-temperature">15°</li>
                   </ul>
                   <ul class="list-group list-group-horizontal-sm">
                     <li class="list-group-item">
-                      <i class="fas fa-tint"></i> Humidity 
+                      <i class="fas fa-tint"></i> Humidity
                     </li>
                     <li class="list-group-item current-humidity">55%</li>
                   </ul>
                   <ul class="list-group list-group-horizontal-md">
                     <li class="list-group-item">
-                     <i class="fas fa-wind"></i>Wind 
+                      <i class="fas fa-wind"></i>Wind
                     </li>
                     <li class="list-group-item current-wind-speed">14 km/h</li>
                   </ul>
@@ -94,161 +99,18 @@
         </div>
       </div>
       <div class="row bottom-row">
-        <div class="col-2">
-          <div class="card" id="daily-parameters">
-            <div class="card-header"></div>
-            <div class="card-body">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">
-                  <i class="fas fa-temperature-low"></i>Low </i>
-                </li>
-              </ul>
-              <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item"><i class="fas fa-tint"></i> Humidity </li>
-              </ul>
-              <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">
-                  <i class="fas fa-wind"></i>Wind 
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card text-center daily-stats-card">
-            <div class="card-header">
-              <h6 class="card-subtitle mb-2 text-muted">Friday</h6>
-              <img
-                src="src/images/m-c-rain.png"
-                class="card-img-top"
-                alt="weather-icon"
-              />
-              <br />
-              <h3>26°</h3>
-              <small>A few showers</small>
-            </div>
-            <div class="card-body">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">15°</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item">55%</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">14 km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card text-center daily-stats-card">
-            <div class="card-header">
-              <h6 class="card-subtitle mb-2 text-muted">Saturday</h6>
-              <img
-                src="src/images/m-c-rain.png"
-                class="card-img-top"
-                alt="weather-icon"
-              />
-              <br />
-              <h3>26°</h3>
-              <small>A few showers</small>
-            </div>
-            <div class="card-body">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">15°</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item">55%</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">14 km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card text-center daily-stats-card">
-            <div class="card-header">
-              <h6 class="card-subtitle mb-2 text-muted">Sunday</h6>
-              <img
-                src="src/images/m-c-rain.png"
-                class="card-img-top"
-                alt="weather-icon"
-              />
-              <br />
-              <h3>26°</h3>
-              <small>A few showers</small>
-            </div>
-            <div class="card-body">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">15°</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item">55%</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">14 km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card text-center daily-stats-card">
-            <div class="card-header">
-              <h6 class="card-subtitle mb-2 text-muted">Monday</h6>
-              <img
-                src="src/images/m-c-rain.png"
-                class="card-img-top"
-                alt="weather-icon"
-              />
-              <br />
-              <h3>26°</h3>
-              <small>A few showers</small>
-            </div>
-            <div class="card-body">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">15°</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item">55%</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">14 km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card text-center daily-stats-card">
-            <div class="card-header">
-              <h6 class="card-subtitle mb-2 text-muted">Tuesday</h6>
-              <img
-                src="src/images/m-c-rain.png"
-                class="card-img-top"
-                alt="weather-icon"
-              />
-              <br />
-              <h3>26°</h3>
-              <small>A few showers</small>
-            </div>
-            <div class="card-body">
-              <ul class="list-group list-group-horizontal">
-                <li class="list-group-item">15°</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-sm">
-                <li class="list-group-item">55%</li>
-              </ul>
-              <ul class="list-group list-group-horizontal-md">
-                <li class="list-group-item">14 km/h</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
     </div>
-<footer>
-  <a href="https://github.com/marina-pk/my-weather-app" target="_blank" class="footer-link" >Open-source code</a> by Marina Pyak
-</footer>
+    <footer>
+      <a
+        href="https://github.com/marina-pk/my-weather-app"
+        target="_blank"
+        class="footer-link"
+        >Open-source code</a
+      >
+      by Marina Pyak
+    </footer>
     <script src="src/index.js"></script>
   </body>
 </html>
