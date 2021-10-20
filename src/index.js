@@ -69,9 +69,7 @@ function searchCity(event) {
     let forecastHTML = `<div class="row">`;
     let forecastHTMLCards = ``;
     forecast.forEach(function (forecastDay, index) {
-      //let dt = new Date(forecastDay.dt);
-
-      if (index < 6 && index != 0) {
+      if (index < 6 && days[now.getDay()] != formatDay(forecastDay.dt)) {
         forecastHTMLCards =
           forecastHTMLCards +
           `
