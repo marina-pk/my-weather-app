@@ -143,44 +143,6 @@ function searchCity(event) {
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
 
-    function convertCelsius(event) {
-      event.preventDefault();
-      let h3 = document.querySelector(".today-temperature");
-      let currentLowTempCelsius = document.querySelector(
-        ".current-low-temperature"
-      );
-
-      h3.innerHTML = Math.round(response.data.main.temp);
-      currentLowTempCelsius.innerHTML = `${Math.round(
-        response.data.main.temp_min
-      )}°`;
-      celsiusLink.classList.add("active");
-      fahrenheitLink.classList.remove("active");
-    }
-
-    let celsiusTemperature = document.querySelector("#celsiusLink");
-    celsiusTemperature.addEventListener("click", convertCelsius);
-
-    function convertFahrenheit(event) {
-      event.preventDefault();
-      let h3 = document.querySelector(".today-temperature");
-      let currentLowTempFahrenheit = document.querySelector(
-        ".current-low-temperature"
-      );
-      let lowFahrenheitTemp = Math.round(response.data.main.temp_min);
-      h3.innerHTML = Math.round(
-        (Math.round(response.data.main.temp) * 9) / 5 + 32
-      );
-
-      currentLowTempFahrenheit.innerHTML = `${Math.round(
-        (lowFahrenheitTemp * 9) / 5 + 32
-      )}°`;
-      celsiusLink.classList.remove("active");
-      fahrenheitLink.classList.add("active");
-    }
-
-    let fahrenheitTemperature = document.querySelector("#fahrenheitLink");
-    fahrenheitTemperature.addEventListener("click", convertFahrenheit);
     getForecast(response.data.coord);
   }
 

@@ -21,9 +21,7 @@ footer {
 .footer-link {
   text-decoration: none;
 }
-.celsius,
-.fahrenheit {
-  text-decoration: none;
+.celsius {
   font-size: 15px;
 }
 .input-box-label {
@@ -58,15 +56,6 @@ footer {
 
 .search-box {
   width: 100%;
-}
-
-.active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-#celsiusLink,
-#fahrenheitLink {
-  text-decoration: none;
 }
 
 .daily-stats-card:hover {
