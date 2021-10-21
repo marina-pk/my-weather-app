@@ -18,6 +18,7 @@ i {
 footer {
   margin: 25px 60px;
 }
+
 .footer-link {
   text-decoration: none;
 }
@@ -119,4 +120,7 @@ span {
   letter-spacing: 1px;
   background: #bfcfff;
   box-shadow: grey 5px 5px 30px;
+}
+#currentCity::first-letter {
+  text-transform: capitalize;
 }
